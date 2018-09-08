@@ -45,7 +45,7 @@ namespace deal.Models
 
         public string LancamentoDescricao { get; set; }
 
-        public decimal? LancamentoValor { get; set; }
+        public string LancamentoValor { get; set; }
 
         public DateTime? LancamentoDataHora { get; set; }
 

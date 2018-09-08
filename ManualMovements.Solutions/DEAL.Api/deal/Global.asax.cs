@@ -18,7 +18,7 @@ namespace deal
                 new Newtonsoft.Json.JsonSerializerSettings
                 {
                     Culture = CultureInfo.GetCultureInfo("pt-br"),
-                    DateFormatString = "dd/MM/yyyy"
+                    DateFormatString = "dd/MM/yyyy hh:mm:ss"
                 };
 
         }

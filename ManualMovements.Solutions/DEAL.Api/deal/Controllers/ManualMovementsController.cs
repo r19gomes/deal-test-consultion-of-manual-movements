@@ -58,14 +58,14 @@ namespace deal.Controllers
 
                         items.LancamentoMes = int.Parse(reader["LancamentoMes"].ToString());
                         items.LancamentoAno = int.Parse(reader["LancamentoAno"].ToString());
-                        items.ProdutoCodigo = reader["ProdutoCodigo"].ToString();
-                        items.ProdutoNome = reader["ProdutoNome"].ToString();
-                        items.LancamentoCosif = reader["LancamentoCosif"].ToString();
+                        items.ProdutoCodigo = reader["ProdutoCodigo"].ToString().Trim();
+                        items.ProdutoNome = reader["ProdutoNome"].ToString().Trim();
+                        items.LancamentoCosif = reader["LancamentoCosif"].ToString().Trim();
                         items.LancamentoNumero = decimal.Parse(reader["LancamentoNumero"].ToString());
-                        items.LancamentoDescricao = reader["LancamentoDescricao"].ToString();
-                        items.LancamentoValor = decimal.Parse(reader["LancamentoValor"].ToString());
+                        items.LancamentoDescricao = reader["LancamentoDescricao"].ToString().Trim();
+                        items.LancamentoValor =  String.Format("{0:C}", reader["LancamentoValor"].ToString());
                         items.LancamentoDataHora = DateTime.Parse(reader["LancamentoDataHora"].ToString());
-                        items.LancamentoUsuario = reader["LancamentoUsuario"].ToString();
+                        items.LancamentoUsuario = reader["LancamentoUsuario"].ToString().Trim();
 
                         if (data == null)
                             data = new List<MovimentoManualGridModel>();

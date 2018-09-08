@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Swashbuckle.Application;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
@@ -9,7 +10,12 @@ namespace deal
     {
         public static void Register(HttpConfiguration config)
         {
-            // Serviços e configuração da API da Web
+            config.Routes.MapHttpRoute(
+                 name: "RotaSwagger",
+                 routeTemplate: "",
+                 defaults: null,
+                 constraints: null,
+                 handler: new RedirectHandler((message => message.RequestUri.ToString()), "swagger"));
 
             // Rotas da API da Web
             config.MapHttpAttributeRoutes();
