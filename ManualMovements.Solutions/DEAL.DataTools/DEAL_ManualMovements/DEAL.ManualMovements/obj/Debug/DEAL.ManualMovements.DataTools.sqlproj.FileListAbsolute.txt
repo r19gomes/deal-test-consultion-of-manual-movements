@@ -1,0 +1,6 @@
+Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\ManualMovements.Solutions\DEAL.DataTools\DEAL_ManualMovements\DEAL.ManualMovements\bin\Debug\DEAL.ManualMovements.DataTools.dacpac
+Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\ManualMovements.Solutions\DEAL.DataTools\DEAL_ManualMovements\DEAL.ManualMovements\bin\Debug\DEAL_ManualMovements.dll
+Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\ManualMovements.Solutions\DEAL.DataTools\DEAL_ManualMovements\DEAL.ManualMovements\bin\Debug\DEAL_ManualMovements.pdb
+Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\ManualMovements.Solutions\DEAL.DataTools\DEAL_ManualMovements\DEAL.ManualMovements\obj\Debug\DEAL.ManualMovements.DataTools.sqlprojAssemblyReference.cache
+Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\ManualMovements.Solutions\DEAL.DataTools\DEAL_ManualMovements\DEAL.ManualMovements\obj\Debug\DEAL_ManualMovements.dll
+Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\ManualMovements.Solutions\DEAL.DataTools\DEAL_ManualMovements\DEAL.ManualMovements\obj\Debug\DEAL_ManualMovements.pdb
