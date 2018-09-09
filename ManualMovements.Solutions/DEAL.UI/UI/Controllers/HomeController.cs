@@ -6,27 +6,35 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using PagedList;
-
+using Newtonsoft.Json;
 
 namespace Deal.UI.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index(int page = 1)
+        public ActionResult Index(int? page = 1)
         {
-            var vw = new IndexViewModel();
-            int pageSize = Convert.ToInt16
+            int pageSize = Convert.ToInt32
                 (ConfigurationManager.AppSettings["QuantityRegistrationPage"]);
-            int pageNumber = page;
+            int pageNumber = (page ?? 1);
 
-            var data = Services.ManualMovements.Index.List(new Models.ManualMovements.Index
+            var viewModel = new IndexViewModel();
+
+            if (TempData["FilterManualMoviments"] != null)
             {
-            });
-            if (data != null)
-                vw.Indexes = data.ToPagedList(pageNumber, pageSize);
+                var filter = (Models.ManualMovements.Filter)TempData["FilterManualMoviments"];
+                var response = ReturnData(filter).ToPagedList(pageNumber, pageSize);
+                if (response != null)
+                    viewModel.Indexes = response;
+            }
+            else
+            {
+                var response = ReturnData(viewModel.Filter).ToPagedList(pageNumber, pageSize);
+                if (response != null)
+                    viewModel.Indexes = response;
+            }
 
-            return View(vw);
-
+            return View(viewModel);
         }
 
         public ActionResult About()
@@ -42,5 +50,25 @@ namespace Deal.UI.Controllers
 
             return View();
         }
+
+        private IList<Index> ReturnData(Models.ManualMovements.Filter filter)
+        {
+            var request = new Index();
+
+            request.Mes = filter.Mes;
+            request.Ano = filter.Ano;
+            request.Numero = filter.Numero;
+            request.ProdutoCodigo = filter.ProdutoCodigo;
+            request.ProdutoNome = filter.ProdutoNome;
+            request.Descricao = filter.Descricao;
+            request.Valor = filter.Valor;
+
+            var data = Services.ManualMovements.Index.List(request);
+
+            TempData["FilterManualMoviments"] = filter;
+
+            return data;
+        }
+
     }
 }

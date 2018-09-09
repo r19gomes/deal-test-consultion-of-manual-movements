@@ -22,10 +22,10 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>09/08/2018 21:52:15</publishTime>
     </File>
     <File Include="bin/Deal.UI.dll">
-      <publishTime>09/09/2018 00:43:39</publishTime>
+      <publishTime>09/09/2018 11:16:48</publishTime>
     </File>
     <File Include="bin/Deal.UI.pdb">
-      <publishTime>09/09/2018 00:43:39</publishTime>
+      <publishTime>09/09/2018 11:16:48</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
       <publishTime>06/27/2017 12:59:34</publishTime>
@@ -349,7 +349,7 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>09/08/2018 21:51:55</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>09/09/2018 00:39:44</publishTime>
+      <publishTime>09/09/2018 11:12:57</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>09/08/2018 21:51:55</publishTime>
@@ -364,7 +364,7 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>09/08/2018 21:51:55</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>09/09/2018 00:43:40</publishTime>
+      <publishTime>09/09/2018 11:16:01</publishTime>
     </File>
   </ItemGroup>
 </Project>

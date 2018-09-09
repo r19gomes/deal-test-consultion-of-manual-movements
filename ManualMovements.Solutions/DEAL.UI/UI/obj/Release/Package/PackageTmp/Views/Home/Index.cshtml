@@ -95,7 +95,43 @@
                 </section>
             </div>
 
+            <div class="col-md-12 pular_linha">&nbsp;</div>
 
+            @if (Model.Indexes.PageCount > 1)
+            {
+                <div class="paginacao col-md-12">
+                    Página @(Model.Indexes.PageCount < Model.Indexes.PageNumber ? 0 : Model.Indexes.PageNumber) de @Model.Indexes.PageCount
+
+                    @if (Model.Indexes.HasPreviousPage)
+                    {
+                        @Html.ActionLink("<<", "Index", new { pagina = 1, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter })
+                        @Html.Raw(" ");
+                        @Html.ActionLink(string.Concat("<", "Anterior"), "Index",
+                            new { pagina = Model.Indexes.PageNumber - 1, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter })
+                    }
+                    else
+                    {
+                        @:<<
+                        @Html.Raw(" ");
+                        @:< Anterior
+                    }
+
+                    @if (Model.Indexes.HasNextPage)
+                    {
+                        @Html.ActionLink(string.Concat("Próximo", ">"), "Index", 
+                            new { page = Model.Indexes.PageNumber + 1, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter })
+                        @Html.Raw(" ");
+                        @Html.ActionLink(">>", "Index", 
+                            new { page = Model.Indexes.PageCount, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter })
+                    }
+                    else
+                    {
+                        @:Próxima >
+                        @Html.Raw(" ")
+                        @:>>
+                    }
+                </div>
+            }
 
         </div>
     }

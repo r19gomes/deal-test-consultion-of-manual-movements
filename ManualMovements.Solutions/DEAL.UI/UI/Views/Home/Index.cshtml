@@ -18,13 +18,29 @@
 
             <div class="form-group col-md-12" style="margin-left: 0em !important;margin-top: 2em !important;padding-left: 0em !important">
                 <div class="form-inline col-md-12" style="min-height: 3em !important">
-                    <div class="form-group col-md-8" style="padding: 0em !important">
-                        <label for="userName">Mês:</label>
-                        <input type="text" class="form-control" id="userName" placeholder="Mês de referência do movimento"
-                               style="width: 90% !important">
-                        @*@Html.ValidationMessageFor(m => m.Users.First().Nome, "", new { @class = "text-danger" })*@
+                    <div class="form-group col-md-2" style="padding: 0em !important;max-width: 11em;">
+                        <label  class="control-label" for="mes">Mês:</label>
+                        <select class="form-control input-group-lg" id="mes">
+                            <option value="0" selected>Todos</option>
+                            <option value="1">Janeiro</option>
+                            <option value="2">Feveiro</option>
+                            <option value="3">Março</option>
+                            <option value="4">Abril</option>
+                            <option value="5">Maio</option>
+                            <option value="6">Junho</option>
+                            <option value="7">Julho</option>
+                            <option value="8">Agosto</option>
+                            <option value="9">Setembro</option>
+                            <option value="10">Outubro</option>
+                            <option value="11">Novembro</option>
+                            <option value="12">Dezembro</option>
+                        </select>
                     </div>
-                    <div class="form-group col-md-4">
+                    <div class="form-group col-md-2" style="padding: 0em !important;min-height:20px;margin-left: 2em;max-width: 10em;">
+                        <label class="control-label" for="ano">Ano:</label>
+                        <input class="form-control input-group-lg" type="number" value="1" min="1980" max="5000" />
+                    </div>
+                    <div class="form-group col-md-4 text-right">
                         <button type="submit" class="btn btn-default" onclick="beforeSubmit()">Consultar</button>
                     </div>
                 </div>
@@ -95,7 +111,43 @@
                 </section>
             </div>
 
+            <div class="col-md-12 pular_linha">&nbsp;</div>
 
+            @if (Model.Indexes.PageCount > 1)
+            {
+                <div class="paginacao col-md-12">
+                    Página @(Model.Indexes.PageCount < Model.Indexes.PageNumber ? 0 : Model.Indexes.PageNumber) de @Model.Indexes.PageCount
+
+                    @if (Model.Indexes.HasPreviousPage)
+                    {
+                        @Html.ActionLink("<<", "Index", new { pagina = 1, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter })
+                        @Html.Raw(" ");
+                        @Html.ActionLink(string.Concat("<", "Anterior"), "Index",
+                            new { pagina = Model.Indexes.PageNumber - 1, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter })
+                    }
+                    else
+                    {
+                        @:<<
+                        @Html.Raw(" ");
+                        @:< Anterior
+                    }
+
+                    @if (Model.Indexes.HasNextPage)
+                    {
+                        @Html.ActionLink(string.Concat("Próximo", ">"), "Index",
+                            new { page = Model.Indexes.PageNumber + 1, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter })
+                        @Html.Raw(" ");
+                        @Html.ActionLink(">>", "Index",
+                            new { page = Model.Indexes.PageCount, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter })
+                    }
+                    else
+                    {
+                        @:Próxima >
+                        @Html.Raw(" ")
+                        @:>>
+                    }
+                </div>
+            }
 
         </div>
     }
