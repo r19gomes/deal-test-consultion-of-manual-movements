@@ -1,15 +1,15 @@
 ﻿@model Deal.UI.Models.ManualMovements.Update
 
-<div class="row form-group">
-    <div class="col-md-6">
-        <label for="viewMes">Mês</label>
+<div class="form-group row" style="width: 80% !important;padding: 1% !important;margin-left: 10%;">
+    <label for="viewMes" class="col-sm-1 col-form-label">Mês:</label>
+    <div class="col-md-4">
         <input type="text" class="form-control" id="viewMes" name="viewMes"
                aria-describedby="mesHelp" placeholder="Entre com o mês"
                value="@Model.Mes" autofocus />
         @Html.ValidationMessageFor(m => m.Mes, "", new { @class = "text-danger" })
     </div>
-    <div class="col-md-6">
-        <label for="viewAno">Ano</label>
+    <label for="viewAno" class="col-sm-1 col-form-label">Ano:</label>
+    <div class="col-md-4">
         <input type="text" class="form-control" id="viewAno" name="viewAno"
                value="@Model.Ano" aria-describedby="anoHelp"
                placeholder="Entre com o ano" />
@@ -17,16 +17,16 @@
     </div>
 </div>
 
-<div class="row form-group">
-    <div class="col-md-6">
-        <label for="viewProdutoCodigo">Produto</label>
+<div class="form-group row" style="width: 80% !important;padding: 1% !important;margin-left: 10%;">
+    <label for="viewProdutoCodigo" class="col-sm-1 col-form-label">Produto:</label>
+    <div class="col-md-4">
         <input type="text" class="form-control" id="viewProdutoCodigo" name="viewProdutoCodigo"
                value="@Model.ProdutoCodigo"
                aria-describedby="produtoCodigoHelp" placeholder="Entre com o código do produto" />
         @Html.ValidationMessageFor(m => m.ProdutoCodigo, "", new { @class = "text-danger" })
     </div>
-    <div class="col-md-6">
-        <label for="viewProdutoCosif">Cosif:</label>
+    <label for="viewProdutoCosif" class="col-sm-1 col-form-label">Cosif:</label>
+    <div class="col-md-4">
         <input type="text" class="form-control" id="viewProdutoCosif" name="viewProdutoCosif"
                value="@Model.ProdutoCosif"
                aria-describedby="produtoCosifHelp" placeholder="Entre com o código cosif" />
@@ -34,9 +34,9 @@
     </div>
 </div>
 
-<div class="row form-group">
+<div class="form-group row" style="width: 80% !important;padding: 1% !important;margin-left: 10%;">
+    <label for="viewValor" class="col-sm-1 col-form-label">Valor:</label>
     <div class="col-md-6">
-        <label for="viewValor">Valor</label>
         <input type="text" class="form-control" id="viewValor" name="viewValor"
                value="@Model.Valor"
                aria-describedby="valorHelp" placeholder="Entre com o valor" />
@@ -44,16 +44,12 @@
     </div>
 </div>
 
-<div class="row form-group">
+<div class="form-group row" style="width: 80% !important;padding: 1% !important;margin-left: 10%;">
+    <label for="viewDescricao" class="col-sm-2 col-form-label">Descrição:</label>
     <div class="col-md-12">
-        <label for="viewDescricao">Descrição:</label>
-        <input type="text" class="form-control" id="viewDescricao" name="viewDescricao"
-               value="@Model.Descricao"
-               aria-describedby="descricaoHelp" placeholder="Entre com a descrição">
-        <small id="descricaoHelp"
-               class="form-text text-muted">
-            Nós nunca vamos compartilhar seu e-mail com mais ninguém..
-        </small>
+        <textarea class="form-control" id="viewDescricao" rows="5" cols="80"
+                  aria-describedby="descricaoHelp"
+                  placeholder="Entre com a descrição">@Model.Descricao</textarea>
     </div>
 </div>
 
