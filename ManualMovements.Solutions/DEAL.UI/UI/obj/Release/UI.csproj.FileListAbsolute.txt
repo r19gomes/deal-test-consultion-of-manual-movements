@@ -99,3 +99,4 @@ Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\Manual
 Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\ManualMovements.Solutions\DEAL.UI\UI\obj\Release\UI.csproj.CopyComplete
 Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\ManualMovements.Solutions\DEAL.UI\UI\obj\Release\Deal.UI.dll
 Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\ManualMovements.Solutions\DEAL.UI\UI\obj\Release\Deal.UI.pdb
+Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\ManualMovements.Solutions\DEAL.UI\UI\obj\Release\UI.csprojAssemblyReference.cache

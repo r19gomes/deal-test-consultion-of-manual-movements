@@ -5,16 +5,19 @@ using System.Collections.Generic;
 namespace Deal.UI.Models.ManualMovements
 {
     [Serializable]
-    public class IndexViewModel
+    public class ViewModel
     {
-        public IndexViewModel()
+        public ViewModel()
         {
             Indexes = new List<Index>().ToPagedList(1, 1);
             Index = new Index();
             Filter = new Filter();
-
+            Update = new Update();
         }
+
         public Index Index { get; set; }
+
+        public Update Update { get; set; }
 
         public String Message { get; set; }
 

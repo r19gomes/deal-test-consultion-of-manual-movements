@@ -1,0 +1,115 @@
+﻿@model Deal.UI.Models.ManualMovements.Update
+
+<div class="row form-group">
+    <div class="col-md-6">
+        <label for="viewMes">Mês</label>
+        <input type="text" class="form-control" id="viewMes" name="viewMes"
+               aria-describedby="mesHelp" placeholder="Entre com o mês"
+               value="@Model.Mes" autofocus />
+        @Html.ValidationMessageFor(m => m.Mes, "", new { @class = "text-danger" })
+    </div>
+    <div class="col-md-6">
+        <label for="viewAno">Ano</label>
+        <input type="text" class="form-control" id="viewAno" name="viewAno"
+               value="@Model.Ano" aria-describedby="anoHelp"
+               placeholder="Entre com o ano" />
+        @Html.ValidationMessageFor(m => m.Ano, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="row form-group">
+    <div class="col-md-6">
+        <label for="viewProdutoCodigo">Produto</label>
+        <input type="text" class="form-control" id="viewProdutoCodigo" name="viewProdutoCodigo"
+               value="@Model.ProdutoCodigo"
+               aria-describedby="produtoCodigoHelp" placeholder="Entre com o código do produto" />
+        @Html.ValidationMessageFor(m => m.ProdutoCodigo, "", new { @class = "text-danger" })
+    </div>
+    <div class="col-md-6">
+        <label for="viewProdutoCosif">Cosif:</label>
+        <input type="text" class="form-control" id="viewProdutoCosif" name="viewProdutoCosif"
+               value="@Model.ProdutoCosif"
+               aria-describedby="produtoCosifHelp" placeholder="Entre com o código cosif" />
+        @Html.ValidationMessageFor(m => m.ProdutoCosif, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="row form-group">
+    <div class="col-md-6">
+        <label for="viewValor">Valor</label>
+        <input type="text" class="form-control" id="viewValor" name="viewValor"
+               value="@Model.Valor"
+               aria-describedby="valorHelp" placeholder="Entre com o valor" />
+        @Html.ValidationMessageFor(m => m.Valor, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="row form-group">
+    <div class="col-md-12">
+        <label for="viewDescricao">Descrição:</label>
+        <input type="text" class="form-control" id="viewDescricao" name="viewDescricao"
+               value="@Model.Descricao"
+               aria-describedby="descricaoHelp" placeholder="Entre com a descrição">
+        <small id="descricaoHelp"
+               class="form-text text-muted">
+            Nós nunca vamos compartilhar seu e-mail com mais ninguém..
+        </small>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+
+    /*
+    ** Inicializa toda a página parcial ou view Hotel.
+    */
+    $(document).ready(function () {
+
+        //let $nome = $("#viewNome");
+        //if ($nome != null && $nome != undefined) {
+        //    $nome.focus();
+        //}
+
+    });
+
+    var beforeSubmit = function () {
+
+        let isValid = true;
+        let message = '';
+
+        let $usuarioId = $("viewUsuarioId");
+        if ($usuarioId != null && $usuarioId != undefined) {
+            $("#UsuarioId").val($usuarioId.val());
+        }
+
+        let $nome = $("#viewNome");
+        if ($nome != null && $nome != undefined) {
+            $("#Nome").val($nome.val());
+        }
+
+        let $apelido = $("#viewApelido");
+        if ($apelido != null && $apelido != undefined) {
+            $("#Apelido").val($apelido.val());
+        }
+
+        let $email = $("#viewEmail");
+        if ($email != null && $email != undefined) {
+            $("#Email").val($email.val());
+        }
+
+        let $login = $("#viewLogin");
+        if ($login != null && $login != undefined) {
+            $("#Login").val($login.val());
+        }
+
+        let $senha = $("#viewSenha");
+        if ($senha != null && $senha != undefined) {
+            $("#Senha").val($senha.val());
+        }
+    }
+
+    var afterSubmit = function () {
+    }
+
+</script>
+

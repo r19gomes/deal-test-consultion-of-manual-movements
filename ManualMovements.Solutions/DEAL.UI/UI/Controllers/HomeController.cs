@@ -12,13 +12,14 @@ namespace Deal.UI.Controllers
 {
     public class HomeController : Controller
     {
+        [HttpGet]
         public ActionResult Index(int? page = 1)
         {
             int pageSize = Convert.ToInt32
                 (ConfigurationManager.AppSettings["QuantityRegistrationPage"]);
             int pageNumber = (page ?? 1);
 
-            var viewModel = new IndexViewModel();
+            var viewModel = new ViewModel();
 
             if (TempData["FilterManualMoviments"] != null)
             {
@@ -35,6 +36,49 @@ namespace Deal.UI.Controllers
             }
 
             return View(viewModel);
+        }
+
+        [HttpGet]
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ActionName("Create")]
+        public ActionResult Create(ViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var ret = Services.ManualMovements.Update.Create(model);
+                if (!ret.Success)
+                {
+                    return View(ret);
+                }
+                else
+                {
+                    return RedirectToAction("Index");
+                }
+            }
+            else
+            {
+                return View(model);
+            }
+        }
+
+        [HttpGet]
+        public ActionResult Edit(Update edit)
+        {
+            if (edit == null)
+                edit = new Update();
+
+            return View(new ViewModel
+            {
+                Message = string.Empty,
+                Success = false,
+                PersistFields = false,
+                Update = edit
+            });
         }
 
         public ActionResult About()

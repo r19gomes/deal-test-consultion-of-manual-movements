@@ -22,10 +22,10 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>09/08/2018 21:52:15</publishTime>
     </File>
     <File Include="bin/Deal.UI.dll">
-      <publishTime>09/09/2018 11:16:48</publishTime>
+      <publishTime>09/09/2018 14:36:18</publishTime>
     </File>
     <File Include="bin/Deal.UI.pdb">
-      <publishTime>09/09/2018 11:16:48</publishTime>
+      <publishTime>09/09/2018 14:36:18</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
       <publishTime>06/27/2017 12:59:34</publishTime>
@@ -58,7 +58,7 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>07/25/2012 11:48:56</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
-      <publishTime>02/18/2018 09:44:54</publishTime>
+      <publishTime>03/24/2018 17:44:14</publishTime>
     </File>
     <File Include="bin/PagedList.dll">
       <publishTime>09/30/2013 17:36:38</publishTime>
@@ -256,58 +256,82 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>01/23/2014 14:57:34</publishTime>
     </File>
     <File Include="Content/bootstrap-theme.css">
-      <publishTime>09/08/2018 21:52:00</publishTime>
+      <publishTime>09/09/2018 12:25:36</publishTime>
     </File>
     <File Include="Content/bootstrap-theme.css.map">
-      <publishTime>09/08/2018 21:52:00</publishTime>
+      <publishTime>09/09/2018 12:25:36</publishTime>
     </File>
     <File Include="Content/bootstrap-theme.min.css">
-      <publishTime>09/08/2018 21:52:00</publishTime>
+      <publishTime>09/09/2018 12:25:36</publishTime>
     </File>
     <File Include="Content/bootstrap-theme.min.css.map">
-      <publishTime>09/08/2018 21:52:00</publishTime>
+      <publishTime>09/09/2018 12:25:36</publishTime>
     </File>
     <File Include="Content/bootstrap.css">
-      <publishTime>09/08/2018 21:52:00</publishTime>
+      <publishTime>09/09/2018 12:25:36</publishTime>
     </File>
     <File Include="Content/bootstrap.css.map">
-      <publishTime>09/08/2018 21:52:00</publishTime>
+      <publishTime>09/09/2018 12:25:36</publishTime>
     </File>
     <File Include="Content/bootstrap.min.css">
-      <publishTime>09/08/2018 21:52:00</publishTime>
+      <publishTime>09/09/2018 12:25:36</publishTime>
     </File>
     <File Include="Content/bootstrap.min.css.map">
-      <publishTime>09/08/2018 21:52:00</publishTime>
+      <publishTime>09/09/2018 12:25:35</publishTime>
     </File>
     <File Include="Content/Site.css">
-      <publishTime>09/09/2018 00:41:46</publishTime>
+      <publishTime>09/09/2018 14:28:49</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>09/08/2018 21:51:55</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.eot">
-      <publishTime>09/08/2018 21:52:00</publishTime>
+      <publishTime>09/09/2018 12:25:35</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.svg">
-      <publishTime>09/08/2018 21:52:00</publishTime>
+      <publishTime>09/09/2018 12:25:35</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.ttf">
-      <publishTime>09/08/2018 21:51:59</publishTime>
+      <publishTime>09/09/2018 12:25:35</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.woff">
-      <publishTime>09/08/2018 21:51:59</publishTime>
+      <publishTime>09/09/2018 12:25:35</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.woff2">
-      <publishTime>09/08/2018 21:51:59</publishTime>
+      <publishTime>09/09/2018 12:25:35</publishTime>
     </File>
     <File Include="Global.asax">
       <publishTime>09/08/2018 21:51:55</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
-      <publishTime>09/08/2018 21:51:59</publishTime>
+      <publishTime>09/09/2018 12:25:35</publishTime>
     </File>
     <File Include="Scripts/bootstrap.min.js">
-      <publishTime>09/08/2018 21:51:59</publishTime>
+      <publishTime>09/09/2018 12:25:35</publishTime>
+    </File>
+    <File Include="Scripts/esm/popper-utils.js">
+      <publishTime>09/09/2018 12:03:07</publishTime>
+    </File>
+    <File Include="Scripts/esm/popper-utils.js.map">
+      <publishTime>09/09/2018 12:03:07</publishTime>
+    </File>
+    <File Include="Scripts/esm/popper-utils.min.js">
+      <publishTime>09/09/2018 12:03:07</publishTime>
+    </File>
+    <File Include="Scripts/esm/popper-utils.min.js.map">
+      <publishTime>09/09/2018 12:03:07</publishTime>
+    </File>
+    <File Include="Scripts/esm/popper.js">
+      <publishTime>09/09/2018 12:03:07</publishTime>
+    </File>
+    <File Include="Scripts/esm/popper.js.map">
+      <publishTime>09/09/2018 12:03:07</publishTime>
+    </File>
+    <File Include="Scripts/esm/popper.min.js">
+      <publishTime>09/09/2018 12:03:07</publishTime>
+    </File>
+    <File Include="Scripts/esm/popper.min.js.map">
+      <publishTime>09/09/2018 12:03:06</publishTime>
     </File>
     <File Include="Scripts/jquery-3.3.1.js">
       <publishTime>09/08/2018 21:52:01</publishTime>
@@ -342,6 +366,57 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
     <File Include="Scripts/modernizr-2.8.3.js">
       <publishTime>09/08/2018 21:52:07</publishTime>
     </File>
+    <File Include="Scripts/popper-utils.js">
+      <publishTime>09/09/2018 12:03:06</publishTime>
+    </File>
+    <File Include="Scripts/popper-utils.js.map">
+      <publishTime>09/09/2018 12:03:06</publishTime>
+    </File>
+    <File Include="Scripts/popper-utils.min.js">
+      <publishTime>09/09/2018 12:03:06</publishTime>
+    </File>
+    <File Include="Scripts/popper-utils.min.js.map">
+      <publishTime>09/09/2018 12:03:06</publishTime>
+    </File>
+    <File Include="Scripts/popper.js">
+      <publishTime>09/09/2018 12:03:06</publishTime>
+    </File>
+    <File Include="Scripts/popper.js.map">
+      <publishTime>09/09/2018 12:03:06</publishTime>
+    </File>
+    <File Include="Scripts/popper.min.js">
+      <publishTime>09/09/2018 12:03:06</publishTime>
+    </File>
+    <File Include="Scripts/popper.min.js.map">
+      <publishTime>09/09/2018 12:03:06</publishTime>
+    </File>
+    <File Include="Scripts/README.md">
+      <publishTime>09/09/2018 12:03:06</publishTime>
+    </File>
+    <File Include="Scripts/umd/popper-utils.js">
+      <publishTime>09/09/2018 12:03:06</publishTime>
+    </File>
+    <File Include="Scripts/umd/popper-utils.js.map">
+      <publishTime>09/09/2018 12:03:06</publishTime>
+    </File>
+    <File Include="Scripts/umd/popper-utils.min.js">
+      <publishTime>09/09/2018 12:03:05</publishTime>
+    </File>
+    <File Include="Scripts/umd/popper-utils.min.js.map">
+      <publishTime>09/09/2018 12:03:05</publishTime>
+    </File>
+    <File Include="Scripts/umd/popper.js">
+      <publishTime>09/09/2018 12:03:05</publishTime>
+    </File>
+    <File Include="Scripts/umd/popper.js.map">
+      <publishTime>09/09/2018 12:03:05</publishTime>
+    </File>
+    <File Include="Scripts/umd/popper.min.js">
+      <publishTime>09/09/2018 12:03:05</publishTime>
+    </File>
+    <File Include="Scripts/umd/popper.min.js.map">
+      <publishTime>09/09/2018 12:03:05</publishTime>
+    </File>
     <File Include="Views/Home/About.cshtml">
       <publishTime>09/08/2018 21:51:55</publishTime>
     </File>
@@ -349,13 +424,13 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>09/08/2018 21:51:55</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>09/09/2018 11:12:57</publishTime>
+      <publishTime>09/09/2018 14:17:20</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>09/08/2018 21:51:55</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>09/08/2018 23:45:30</publishTime>
+      <publishTime>09/09/2018 14:32:06</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>09/08/2018 21:51:55</publishTime>
@@ -364,7 +439,7 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>09/08/2018 21:51:55</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>09/09/2018 11:16:01</publishTime>
+      <publishTime>09/09/2018 14:36:19</publishTime>
     </File>
   </ItemGroup>
 </Project>
