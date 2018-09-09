@@ -1,31 +1,128 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿@model Deal.UI.Models.ManualMovements.IndexViewModel
+
+@{
+    ViewBag.Title = "Index";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+<div class="col-md-12 filtro">
+
+    @using (Html.BeginForm("Index", "Home", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new
+    {
+        @class = "form-horizontal",
+        role = "form"
+    }))
+    {
+        <div class="container">
+
+            <h4>Movimentos Manuais</h4>
+
+            <div class="form-group col-md-12" style="margin-left: 0em !important;margin-top: 2em !important;padding-left: 0em !important">
+                <div class="form-inline col-md-12" style="min-height: 3em !important">
+                    <div class="form-group col-md-8" style="padding: 0em !important">
+                        <label for="userName">Mês:</label>
+                        <input type="text" class="form-control" id="userName" placeholder="Mês de referência do movimento"
+                               style="width: 90% !important">
+                        @*@Html.ValidationMessageFor(m => m.Users.First().Nome, "", new { @class = "text-danger" })*@
+                    </div>
+                    <div class="form-group col-md-4">
+                        <button type="submit" class="btn btn-default" onclick="beforeSubmit()">Consultar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 jump-line">&nbsp;</div>
+
+            <div class="col-md-12" style="padding: 0em !important;">
+                @Html.ActionLink("Cadastrar", "Create", "Create", new { @class = "btn btn-primary" })
+            </div>
+
+            <div class="col-md-12 jump-line">&nbsp;</div>
+
+            <div class="col-md-12" style="min-height: 2em !important;vertical-align: middle">
+                <section id="labelRegistro">
+                    <div class="row form-row-two-lines">
+                        <div class="col-md-1 label-listing form-text-center form-tow-lines">@Html.LabelFor(m => m.Indexes.First().Mes)</div>
+                        <div class="col-md-1 label-listing form-text-center form-tow-lines">@Html.LabelFor(m => m.Indexes.First().Ano)</div>
+                        <div class="col-md-1 label-listing form-text-center form-tow-lines">@Html.LabelFor(m => m.Indexes.First().ProdutoCodigo)</div>
+                        <div class="col-md-2 label-listing form-text-center form-tow-lines">@Html.LabelFor(m => m.Indexes.First().ProdutoNome)</div>
+                        <div class="col-md-2 label-listing form-text-center form-tow-lines">@Html.LabelFor(m => m.Indexes.First().Numero)</div>
+                        <div class="col-md-2 label-listing form-text-center form-tow-lines">@Html.LabelFor(m => m.Indexes.First().Descricao)</div>
+                        <div class="col-md-1 label-listing form-text-center form-tow-lines">@Html.LabelFor(m => m.Indexes.First().Valor)</div>
+                        <div class="col-md-1 label-listing form-text-center form-tow-lines">Ações</div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="col-md-12">
+                <section id="labelRegistro">
+                    @{
+                        if (Model.Indexes != null)
+                        {
+                            foreach (var item in Model.Indexes)
+                            {
+                                //  Obtém os campos demonstrados no grid de resultado.
+                                var dataHora = item.DataHora;
+
+                                //  Exibe os conteúdos recuperados no grid de resultado.
+                                <div class="row">
+                                    <div class="col-md-1 content-listing form-text-center">@item.Mes</div>
+                                    <div class="col-md-1 content-listing form-text-center">@item.Ano</div>
+                                    <div class="col-md-1 content-listing form-text-center">@item.ProdutoCodigo</div>
+                                    <div class="col-md-2 content-listing">@item.ProdutoNome</div>
+                                    <div class="col-md-2 content-listing form-text-center">@item.Numero</div>
+                                    <div class="col-md-2 content-listing">@item.Descricao</div>
+                                    <div class="col-md-1 content-listing form-text-right">@item.Valor</div>
+                                    <div class="col-md-1 content-listing form-text-center">
+                                        @Html.ActionLink("Editar", "Edit", new
+                                       {
+                                           Mes = item.Mes,
+                                           Ano = item.Ano,
+                                           ProdutoCodigo = item.ProdutoCodigo,
+                                           ProdutoCosif = item.ProdutoCosif,
+                                           ProdutoNome = item.ProdutoNome,
+                                           Numero = item.Numero,
+                                           Descricao = item.Descricao,
+                                           Valor = item.Valor,
+                                           DataHora = item.DataHora,
+                                           Usuario = item.Usuario
+                                       })
+                                    </div>
+
+                                </div>
+                            }
+                        }
+                    }
+                </section>
+            </div>
+
+
+
+        </div>
+    }
+
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+@section Scripts {
+    <script type="text/javascript">
+
+        /*
+        ** Inicializa toda a página parcial ou view Index.
+        */
+        $(document).ready(function () {
+
+            let $userName = $("#userName");
+            if ($userName != null) {
+                $userName.focus();
+            }
+
+        });
+
+        var beforeSubmit = function () {
+
+            let isValid = true;
+            let message = '';
+
+        }
+
+    </script>
+}

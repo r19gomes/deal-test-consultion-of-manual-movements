@@ -1,7 +1,4 @@
 Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\ManualMovements.Solutions\DEAL.UI\UI\bin\ApplicationInsights.config
-Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\ManualMovements.Solutions\DEAL.UI\UI\bin\UI.dll.config
-Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\ManualMovements.Solutions\DEAL.UI\UI\bin\UI.dll
-Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\ManualMovements.Solutions\DEAL.UI\UI\bin\UI.pdb
 Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\ManualMovements.Solutions\DEAL.UI\UI\bin\roslyn\csc.exe
 Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\ManualMovements.Solutions\DEAL.UI\UI\bin\roslyn\csc.exe.config
 Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\ManualMovements.Solutions\DEAL.UI\UI\bin\roslyn\csc.rsp
@@ -96,5 +93,10 @@ Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\Manual
 Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\ManualMovements.Solutions\DEAL.UI\UI\obj\Debug\UI.csprojAssemblyReference.cache
 Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\ManualMovements.Solutions\DEAL.UI\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
 Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\ManualMovements.Solutions\DEAL.UI\UI\obj\Debug\UI.csproj.CopyComplete
-Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\ManualMovements.Solutions\DEAL.UI\UI\obj\Debug\UI.dll
-Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\ManualMovements.Solutions\DEAL.UI\UI\obj\Debug\UI.pdb
+Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\ManualMovements.Solutions\DEAL.UI\UI\bin\Deal.UI.dll.config
+Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\ManualMovements.Solutions\DEAL.UI\UI\bin\Deal.UI.dll
+Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\ManualMovements.Solutions\DEAL.UI\UI\bin\Deal.UI.pdb
+Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\ManualMovements.Solutions\DEAL.UI\UI\obj\Debug\Deal.UI.dll
+Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\ManualMovements.Solutions\DEAL.UI\UI\obj\Debug\Deal.UI.pdb
+Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\ManualMovements.Solutions\DEAL.UI\UI\bin\PagedList.dll
+Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\ManualMovements.Solutions\DEAL.UI\UI\bin\PagedList.xml

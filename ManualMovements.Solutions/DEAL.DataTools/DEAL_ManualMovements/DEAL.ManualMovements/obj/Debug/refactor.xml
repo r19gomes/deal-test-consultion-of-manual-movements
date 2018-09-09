@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0">
+  <Operation Name="Rename Refactor" Key="abad6326-ab57-4af1-aee7-2c2fda49ac1d" ChangeDateTime="09/07/2018 10:31:20" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[PRODUTO_COSIF].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[PRODUTO_COSIF]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="COD_PRODUTO" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="58986ea7-407c-4deb-b2d8-253ec87ef214" ChangeDateTime="09/07/2018 10:33:31" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[PRODUTO].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[PRODUTO]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="COD_PRODUTO" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="63eb1883-3d9e-4366-b988-40fb0033e026" ChangeDateTime="09/07/2018 11:18:19" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[MOVIMENTO_MANUAL].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[MOVIMENTO_MANUAL]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DAT_MES" />
+  </Operation>
+</Operations>
