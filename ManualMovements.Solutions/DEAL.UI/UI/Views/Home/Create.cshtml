@@ -1,7 +1,7 @@
 ﻿@model Deal.UI.Models.ManualMovements.ViewModel
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Movimentos";
 }
 
 @using (Html.BeginForm("Create", "Home", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new
@@ -24,6 +24,9 @@
 
     <section style="margin-top: 2%;margin-left: 10%;margin-right: 10%">
 
+        <h4 style="width: 70%;margin-left: 13%;">Cadastrar Novo Movimento</h4>
+        <hr />
+
         @{
             var viewModel = new Deal.UI.Models.ManualMovements.ViewModel();
             if (Model != null)
@@ -34,12 +37,19 @@
 
         @Html.Partial("Shared", viewModel.Update)
 
-        <div class="form-group row" 
-             style="width: 68% !important;padding: 0em!important;margin-left: 13%;text-align: right;">
+        <div class="form-group row"
+             style="width: 70% !important;padding: 0em!important;margin-left: 13%;text-align: right;">
             <br />
-            <div class="col-md-10" style="padding: 0em;">
+            <div class="col-md-12" style="padding: 0em;">
+                <button type="submit" class="btn btn-warning">
+                    <span class="glyphicon glyphicon-refresh"></span> Limpar
+                </button>
+                <button type="submit" class="btn btn-success">
+                    <span class="glyphicon glyphicon-file"></span> Novo
+                </button>
+
                 <button type="submit" class="btn btn-primary" onclick="beforeSubmit()">
-                    <span class="glyphicon glyphicon-floppy-saved"></span> Salvar
+                    <span class="glyphicon glyphicon-floppy-saved"></span> Incluir
                 </button>
                 <button type="button" class="btn btn-default" onclick="location.href='@Url.Action("Index", "Home")'">
                     <span class="glyphicon glyphicon-circle-arrow-left"></span> Voltar

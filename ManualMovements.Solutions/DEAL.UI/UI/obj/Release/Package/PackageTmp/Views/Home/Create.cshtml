@@ -1,0 +1,51 @@
+﻿@model Deal.UI.Models.ManualMovements.ViewModel
+
+@{
+    ViewBag.Title = "Create";
+}
+
+@using (Html.BeginForm("Create", "Home", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new
+{
+    @class = "form-inline",
+    role = "form"
+}))
+{
+    @Html.HiddenFor(model => model.Update.Mes, new { @Id = "Mes" })
+    @Html.HiddenFor(model => model.Update.Ano, new { @Id = "Ano" })
+    @Html.HiddenFor(model => model.Update.Numero, new { @Id = "Numero" })
+    @Html.HiddenFor(model => model.Update.ProdutoCodigo, new { @Id = "ProdutoCodigo" })
+    @Html.HiddenFor(model => model.Update.ProdutoCosif, new { @Id = "ProdutoCosif" })
+    @Html.HiddenFor(model => model.Update.DataHora, new { @Id = "DataHora" })
+    @Html.HiddenFor(model => model.Update.Valor, new { @Id = "Valor" })
+    @Html.HiddenFor(model => model.Update.Descricao, new { @Id = "Descricao" })
+    @Html.HiddenFor(model => model.Update.Usuario, new { @Id = "Usuario" })
+    @Html.HiddenFor(model => model.PersistFields, new { @Id = "PersistFields" })
+
+
+    <section style="margin-top: 2%;margin-left: 10%;margin-right: 10%">
+
+        @{
+            var viewModel = new Deal.UI.Models.ManualMovements.ViewModel();
+            if (Model != null)
+            {
+                viewModel = Model;
+            }
+        }
+
+        @Html.Partial("Shared", viewModel.Update)
+
+        <div class="form-group row" 
+             style="width: 68% !important;padding: 0em!important;margin-left: 13%;text-align: right;">
+            <br />
+            <div class="col-md-10" style="padding: 0em;">
+                <button type="submit" class="btn btn-primary" onclick="beforeSubmit()">
+                    <span class="glyphicon glyphicon-floppy-saved"></span> Salvar
+                </button>
+                <button type="button" class="btn btn-default" onclick="location.href='@Url.Action("Index", "Home")'">
+                    <span class="glyphicon glyphicon-circle-arrow-left"></span> Voltar
+                </button>
+            </div>
+        </div>
+
+    </section>
+}

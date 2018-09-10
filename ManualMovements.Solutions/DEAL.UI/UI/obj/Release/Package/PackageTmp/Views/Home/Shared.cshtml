@@ -1,0 +1,111 @@
+﻿@model Deal.UI.Models.ManualMovements.Update
+
+<div class="form-group row" style="width: 80% !important;padding: 1% !important;margin-left: 10%;">
+    <label for="viewMes" class="col-sm-1 col-form-label">Mês:</label>
+    <div class="col-md-4">
+        <input type="text" class="form-control" id="viewMes" name="viewMes"
+               aria-describedby="mesHelp" placeholder="Entre com o mês"
+               value="@Model.Mes" autofocus />
+        @Html.ValidationMessageFor(m => m.Mes, "", new { @class = "text-danger" })
+    </div>
+    <label for="viewAno" class="col-sm-1 col-form-label">Ano:</label>
+    <div class="col-md-4">
+        <input type="text" class="form-control" id="viewAno" name="viewAno"
+               value="@Model.Ano" aria-describedby="anoHelp"
+               placeholder="Entre com o ano" />
+        @Html.ValidationMessageFor(m => m.Ano, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group row" style="width: 80% !important;padding: 1% !important;margin-left: 10%;">
+    <label for="viewProdutoCodigo" class="col-sm-1 col-form-label">Produto:</label>
+    <div class="col-md-4">
+        <input type="text" class="form-control" id="viewProdutoCodigo" name="viewProdutoCodigo"
+               value="@Model.ProdutoCodigo"
+               aria-describedby="produtoCodigoHelp" placeholder="Entre com o código do produto" />
+        @Html.ValidationMessageFor(m => m.ProdutoCodigo, "", new { @class = "text-danger" })
+    </div>
+    <label for="viewProdutoCosif" class="col-sm-1 col-form-label">Cosif:</label>
+    <div class="col-md-4">
+        <input type="text" class="form-control" id="viewProdutoCosif" name="viewProdutoCosif"
+               value="@Model.ProdutoCosif"
+               aria-describedby="produtoCosifHelp" placeholder="Entre com o código cosif" />
+        @Html.ValidationMessageFor(m => m.ProdutoCosif, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group row" style="width: 80% !important;padding: 1% !important;margin-left: 10%;">
+    <label for="viewValor" class="col-sm-1 col-form-label">Valor:</label>
+    <div class="col-md-6">
+        <input type="text" class="form-control" id="viewValor" name="viewValor"
+               value="@Model.Valor"
+               aria-describedby="valorHelp" placeholder="Entre com o valor" />
+        @Html.ValidationMessageFor(m => m.Valor, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group row" style="width: 80% !important;padding: 1% !important;margin-left: 10%;">
+    <label for="viewDescricao" class="col-sm-2 col-form-label">Descrição:</label>
+    <div class="col-md-12">
+        <textarea class="form-control" id="viewDescricao" rows="5" cols="80"
+                  aria-describedby="descricaoHelp"
+                  placeholder="Entre com a descrição">@Model.Descricao</textarea>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+
+    /*
+    ** Inicializa toda a página parcial ou view Hotel.
+    */
+    $(document).ready(function () {
+
+        //let $nome = $("#viewNome");
+        //if ($nome != null && $nome != undefined) {
+        //    $nome.focus();
+        //}
+
+    });
+
+    var beforeSubmit = function () {
+
+        let isValid = true;
+        let message = '';
+
+        let $usuarioId = $("viewUsuarioId");
+        if ($usuarioId != null && $usuarioId != undefined) {
+            $("#UsuarioId").val($usuarioId.val());
+        }
+
+        let $nome = $("#viewNome");
+        if ($nome != null && $nome != undefined) {
+            $("#Nome").val($nome.val());
+        }
+
+        let $apelido = $("#viewApelido");
+        if ($apelido != null && $apelido != undefined) {
+            $("#Apelido").val($apelido.val());
+        }
+
+        let $email = $("#viewEmail");
+        if ($email != null && $email != undefined) {
+            $("#Email").val($email.val());
+        }
+
+        let $login = $("#viewLogin");
+        if ($login != null && $login != undefined) {
+            $("#Login").val($login.val());
+        }
+
+        let $senha = $("#viewSenha");
+        if ($senha != null && $senha != undefined) {
+            $("#Senha").val($senha.val());
+        }
+    }
+
+    var afterSubmit = function () {
+    }
+
+</script>
+
