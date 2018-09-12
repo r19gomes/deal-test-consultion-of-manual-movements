@@ -1,33 +1,33 @@
 ﻿@model Deal.UI.Models.ManualMovements.Update
 
 <div class="form-group row" style="width: 80% !important;padding: 1% !important;margin-left: 10%;">
-    <label for="viewMes" class="col-sm-2 col-form-label">Mês:</label>
+    <label for="viewMes" class="col-sm-2 form-control-label">Mês:</label>
     <div class="col-md-4">
-        <input type="text" class="form-control" id="viewMes" name="viewMes"
+        <input type="number" class="form-control input-group-lg" id="viewMes" name="viewMes"
                aria-describedby="mesHelp" placeholder="Entre com o mês"
-               value="@Model.Mes" autofocus />
+               value="@Model.Mes" autofocus min="1" max="12"/>
         @Html.ValidationMessageFor(m => m.Mes, "", new { @class = "text-danger" })
     </div>
-    <label for="viewAno" class="col-sm-2 col-form-label">Ano:</label>
+    <label for="viewAno" class="col-sm-2 form-control-label">Ano:</label>
     <div class="col-md-4">
-        <input type="text" class="form-control" id="viewAno" name="viewAno"
+        <input type="number" class="form-control input-group-lg" id="viewAno" name="viewAno"
                value="@Model.Ano" aria-describedby="anoHelp"
-               placeholder="Entre com o ano" />
+               placeholder="Entre com o ano" min="1980" max="5000" />
         @Html.ValidationMessageFor(m => m.Ano, "", new { @class = "text-danger" })
     </div>
 </div>
 
 <div class="form-group row" style="width: 80% !important;padding: 1% !important;margin-left: 10%;">
-    <label for="viewProdutoCodigo" class="col-sm-2 col-form-label">Produto:</label>
+    <label for="viewProdutoCodigo" class="col-sm-2 form-control-label">Produto:</label>
     <div class="col-md-4">
-        <input type="text" class="form-control" id="viewProdutoCodigo" name="viewProdutoCodigo"
+        <input type="text" class="form-control input-group-lg" id="viewProdutoCodigo" name="viewProdutoCodigo"
                value="@Model.ProdutoCodigo"
                aria-describedby="produtoCodigoHelp" placeholder="Entre com o código do produto" />
         @Html.ValidationMessageFor(m => m.ProdutoCodigo, "", new { @class = "text-danger" })
     </div>
-    <label for="viewProdutoCosif" class="col-sm-2 col-form-label">Cosif:</label>
+    <label for="viewProdutoCosif" class="col-sm-2 form-control-label">Cosif:</label>
     <div class="col-md-4">
-        <input type="text" class="form-control" id="viewProdutoCosif" name="viewProdutoCosif"
+        <input type="text" class="form-control input-group-lg" id="viewProdutoCosif" name="viewProdutoCosif"
                value="@Model.ProdutoCosif"
                aria-describedby="produtoCosifHelp" placeholder="Entre com o código cosif" />
         @Html.ValidationMessageFor(m => m.ProdutoCosif, "", new { @class = "text-danger" })
@@ -35,17 +35,17 @@
 </div>
 
 <div class="form-group row" style="width: 80% !important;padding: 1% !important;margin-left: 10%;">
-    <label for="viewValor" class="col-sm-2 col-form-label">Valor:</label>
+    <label for="viewValor" class="col-sm-2 form-control-label">Valor:</label>
     <div class="col-md-6">
-        <input type="text" class="form-control" id="viewValor" name="viewValor"
-               value="@Model.Valor"
+        <input type="text" class="form-control input-group-lg" id="viewValor" name="viewValor"
+               value="@Model.Valor" style="text-align: right" 
                aria-describedby="valorHelp" placeholder="Entre com o valor" />
         @Html.ValidationMessageFor(m => m.Valor, "", new { @class = "text-danger" })
     </div>
 </div>
 
 <div class="form-group row" style="width: 80% !important;padding: 1% !important;margin-left: 10%;">
-    <label for="viewDescricao" class="col-sm-2 col-form-label">Descrição:</label>
+    <label for="viewDescricao" class="col-sm-2 form-control-label">Descrição:</label>
     <div class="col-md-8">
         <textarea class="form-control" id="viewDescricao" rows="5" cols="80"
                   aria-describedby="descricaoHelp"

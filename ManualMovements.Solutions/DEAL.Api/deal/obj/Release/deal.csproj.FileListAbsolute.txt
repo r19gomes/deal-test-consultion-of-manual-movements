@@ -74,3 +74,5 @@ Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\Manual
 Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\ManualMovements.Solutions\DEAL.Api\deal\obj\Release\deal.csproj.CopyComplete
 Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\ManualMovements.Solutions\DEAL.Api\deal\obj\Release\deal.dll
 Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\ManualMovements.Solutions\DEAL.Api\deal\obj\Release\deal.pdb
+Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\ManualMovements.Solutions\DEAL.Api\deal\obj\Release\deal.Migrations.Initial.resources
+Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\ManualMovements.Solutions\DEAL.Api\deal\obj\Release\deal.csproj.GenerateResource.cache

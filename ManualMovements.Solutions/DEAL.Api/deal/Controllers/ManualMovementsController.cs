@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Web.Http;
 
+
 namespace deal.Controllers
 {
     public class ManualMovementsController : ApiController
@@ -28,7 +29,7 @@ namespace deal.Controllers
 
         public IHttpActionResult Get
             (int? mes = null, int? ano = null, decimal? numero = null,
-                string produtoCodigo = null, string produtoDescricao = null, 
+                string produtoCodigo = null, string produtoDescricao = null,
                 string descricao = null, decimal? valor = null)
         {
             var message = string.Empty;
@@ -63,7 +64,7 @@ namespace deal.Controllers
                         items.LancamentoCosif = reader["LancamentoCosif"].ToString().Trim();
                         items.LancamentoNumero = decimal.Parse(reader["LancamentoNumero"].ToString());
                         items.LancamentoDescricao = reader["LancamentoDescricao"].ToString().Trim();
-                        items.LancamentoValor =  String.Format("{0:C}", reader["LancamentoValor"].ToString());
+                        items.LancamentoValor = String.Format("{0:C}", reader["LancamentoValor"].ToString());
                         items.LancamentoDataHora = DateTime.Parse(reader["LancamentoDataHora"].ToString());
                         items.LancamentoUsuario = reader["LancamentoUsuario"].ToString().Trim();
 
@@ -88,29 +89,75 @@ namespace deal.Controllers
         }
 
 
-        //[HttpPost]
-        //public IHttpActionResult Post(MovimentoManual data)
-        //{
-        //    //  Valida os requisitos
-        //    if (!ModelState.IsValid)
-        //        return BadRequest(ModelState);
+        [HttpPost]
+        public IHttpActionResult Post(MovimentoManualModel data)
+        {
+            var message = string.Empty;
+            try
+            {
+                //  Valida os requisitos
+                if (!ModelState.IsValid)
+                    return BadRequest(ModelState);
 
-        //    db.MovimentosManuais.Add(data);
-        //    db.SaveChanges();
+                //  Valida se os campos desejados foram recebidos.
+                if (data == null)
+                {
+                    message = "Parametros desejados não recebido.";
+                    return BadRequest(message);
+                }
 
-        //    //  Código 201 (Created-http) - Vamos retornarr o código 201 + URL + Classe Movimento Manual.
-        //    return CreatedAtRoute("DefaultApi",
-        //        new
-        //        {
-        //            id = new string[] {
-        //                data.DAT_MES.ToString(),
-        //                data.DAT_ANO.ToString(),
-        //                data.NUM_LANCAMENTO.ToString(),
-        //                data.COD_PRODUTO,
-        //                data.COD_COSIF
-        //            }
-        //        }, data);
-        //}
+                //  Valida se o produto existe na Tabela PRODUTO
+                if (string.IsNullOrEmpty(data.ProdutoCodigo ))
+                {
+                    message = "Código do produto não foi informado.";
+                    return BadRequest(message);
+                } else
+                {
+                    var result = db.Produtos.Find(data.ProdutoCodigo);
+                    if (result == null)
+                    {
+                        message = string.Format("Código do produto {0} não encontrado na entidade PRODUTO.", data.ProdutoCodigo);
+                        return BadRequest(message);
+                    }
+                }
+
+                //  Valida se a chave estrangeira de PRODUTO COSIF existe.
+                if (string.IsNullOrEmpty(data.ProdutoCosif))
+                {
+                    message = "Código cosif não foi informado";
+                } else
+                {
+                    var result = db.ProdutosCosifs.Find(new String[] { data.ProdutoCodigo, data.ProdutoCosif });
+                    if (result == null)
+                    {
+                        message = string.Format("Produto cosif {0} não encontrado na entidade PRODUTO COSIF.", data.ProdutoCosif);
+                        return BadRequest(message);
+                    }
+                }
+
+                db.MovimentosManuais.Add(data);
+                db.SaveChanges();
+
+                //  Código 201 (Created-http) - Vamos retornarr o código 201 + URL + Classe Movimento Manual.
+                return CreatedAtRoute("DefaultApi",
+                    new
+                    {
+                        id = new string[] {
+                        data.Mes.ToString(),
+                        data.Ano.ToString(),
+                        data.Numero.ToString(),
+                        data.ProdutoCodigo,
+                        data.ProdutoCosif
+                        }
+                    }, data);
+            }
+            catch (Exception ex)
+            {
+                message = ex.Message.ToString();
+                return BadRequest(message);
+            }
+
+        }
 
         #endregion
     }
