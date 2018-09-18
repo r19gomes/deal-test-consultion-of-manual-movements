@@ -24,33 +24,36 @@ namespace Deal.UI.Services.ManualMovements
             var retApi = retApiString.Result;
             var ret = new List<Models.ManualMovements.Index>();
 
-            List<Dictionary<string, string>> date = JsonConvert.DeserializeObject<List<Dictionary<string, string>>>(retApi);
-            foreach (Dictionary<string, string> lst in date)
+            List<Dictionary<string, string>> data = JsonConvert.DeserializeObject<List<Dictionary<string, string>>>(retApi);
+            if (data != null)
             {
-                var register = new Models.ManualMovements.Index();
-                foreach (KeyValuePair<string, string> item in lst)
+                foreach (Dictionary<string, string> lst in data)
                 {
-                    if (register != null)
+                    var register = new Models.ManualMovements.Index();
+                    foreach (KeyValuePair<string, string> item in lst)
                     {
-                        if (!string.IsNullOrEmpty(item.Key))
+                        if (register != null)
                         {
-                            if (item.Value != null)
+                            if (!string.IsNullOrEmpty(item.Key))
                             {
-                                register.Mes = item.Key.ToLower().Trim() == "lancamentomes" ? int.Parse(item.Value) : register.Mes;
-                                register.Ano = item.Key.ToLower().Trim() == "lancamentoano" ? int.Parse(item.Value) : register.Ano;
-                                register.ProdutoCodigo = item.Key.ToLower().Trim() == "produtocodigo" ? item.Value : register.ProdutoCodigo;
-                                register.ProdutoNome = item.Key.ToLower().Trim() == "produtonome" ? item.Value : register.ProdutoNome;
-                                register.ProdutoCosif = item.Key.ToLower().Trim() == "lancamentocosif" ? item.Value : register.ProdutoCosif;
-                                register.Numero = item.Key.ToLower().Trim() == "lancamentonumero" ? decimal.Parse(item.Value) : register.Numero;
-                                register.Descricao = item.Key.ToLower().Trim() == "lancamentodescricao" ? item.Value : register.Descricao;
-                                register.Valor = item.Key.ToLower().Trim() == "lancamentovalor" ? decimal.Parse(item.Value) : register.Valor;
-                                register.DataHora = item.Key.ToLower().Trim() == "lancamentodatahora" ? DateTime.Parse(item.Value) : register.DataHora;
-                                register.Usuario = item.Key.ToLower().Trim() == "lancamentousuario" ? item.Value : register.Usuario;
+                                if (item.Value != null)
+                                {
+                                    register.Mes = item.Key.ToLower().Trim() == "lancamentomes" ? int.Parse(item.Value) : register.Mes;
+                                    register.Ano = item.Key.ToLower().Trim() == "lancamentoano" ? int.Parse(item.Value) : register.Ano;
+                                    register.ProdutoCodigo = item.Key.ToLower().Trim() == "produtocodigo" ? item.Value : register.ProdutoCodigo;
+                                    register.ProdutoNome = item.Key.ToLower().Trim() == "produtonome" ? item.Value : register.ProdutoNome;
+                                    register.ProdutoCosif = item.Key.ToLower().Trim() == "lancamentocosif" ? item.Value : register.ProdutoCosif;
+                                    register.Numero = item.Key.ToLower().Trim() == "lancamentonumero" ? decimal.Parse(item.Value) : register.Numero;
+                                    register.Descricao = item.Key.ToLower().Trim() == "lancamentodescricao" ? item.Value : register.Descricao;
+                                    register.Valor = item.Key.ToLower().Trim() == "lancamentovalor" ? decimal.Parse(item.Value) : register.Valor;
+                                    register.DataHora = item.Key.ToLower().Trim() == "lancamentodatahora" ? DateTime.Parse(item.Value) : register.DataHora;
+                                    register.Usuario = item.Key.ToLower().Trim() == "lancamentousuario" ? item.Value : register.Usuario;
+                                }
                             }
                         }
                     }
+                    ret.Add(register);
                 }
-                ret.Add(register);
             }
 
             return ret;
