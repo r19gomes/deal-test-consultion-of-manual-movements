@@ -13,6 +13,14 @@ namespace deal.Models
             ProdutosCosifs = new List<ProdutoCosifModel>();
         }
 
+        public ProdutoModel(ProdutoModel model): base()
+        {
+            ProdutoCodigo = model.ProdutoCodigo;
+            Descricao = model.Descricao;
+            Status = model.Status;
+            ProdutosCosifs = new List<ProdutoCosifModel>();
+        }
+
         #endregion
 
         #region Fields
@@ -26,7 +34,7 @@ namespace deal.Models
         [MaxLength(1, ErrorMessage = "Status do produto só pode conter apenas 1 caracter.")]
         public string Status { get; set; }
 
-        public virtual ICollection<ProdutoCosifModel> ProdutosCosifs { get; set; }
+        public virtual IList<ProdutoCosifModel> ProdutosCosifs { get; set; }
 
         #endregion
     }

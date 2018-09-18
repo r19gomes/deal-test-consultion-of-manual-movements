@@ -10,6 +10,8 @@ namespace deal
     {
         public static void Register(HttpConfiguration config)
         {
+            config.EnableCors();
+
             config.Routes.MapHttpRoute(
                  name: "RotaSwagger",
                  routeTemplate: "",

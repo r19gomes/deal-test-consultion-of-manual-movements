@@ -10,10 +10,12 @@ namespace deal.Models.Mapping
             this.HasKey(t => t.ProdutoCodigo);
 
             // Propriedades
+            this.Property(t => t.ProdutoCodigo)
+                .HasMaxLength(4).HasColumnType("CHAR");
             this.Property(t => t.Descricao)
-                .HasMaxLength(30);
+                .HasMaxLength(30).HasColumnType("VARCHAR");
             this.Property(t => t.Status)
-                .HasMaxLength(1);
+                .HasMaxLength(1).HasColumnType("CHAR");
 
             // Table e Mapeamento das Colunas
             this.ToTable("PRODUTO");

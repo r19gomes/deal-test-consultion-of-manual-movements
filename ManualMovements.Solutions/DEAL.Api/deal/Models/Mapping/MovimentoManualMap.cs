@@ -14,10 +14,14 @@ namespace deal.Models.Mapping
             this.HasKey(t => new { t.Mes, t.Ano, t.Numero, t.ProdutoCodigo, t.ProdutoCosif });
 
             // Propriedades
-            this.Property(t => t.DataHora).HasColumnType("datetime2");
-            this.Property(t => t.Valor).HasColumnType("decimal");
-            this.Property(t => t.Descricao).HasColumnType("varchar").HasMaxLength(50);
-            this.Property(t => t.Usuario).HasColumnType("varchar").HasMaxLength(15);
+            this.Property(t => t.DataHora)
+                .HasColumnType("datetime2");
+            this.Property(t => t.Valor)
+                .HasColumnType("numeric");
+            this.Property(t => t.Descricao)
+                .HasColumnType("varchar").HasMaxLength(50);
+            this.Property(t => t.Usuario)
+                .HasColumnType("varchar").HasMaxLength(15);
 
             // Table e Mapeamento das Colunas
             this.ToTable("MOVIMENTO_MANUAL");
@@ -34,7 +38,7 @@ namespace deal.Models.Mapping
             // Relacionamento 
             this.HasRequired(t => t.ProdutoCosifs)
                 .WithMany(t => t.MovimentosManuais)
-                .HasForeignKey(d => new { d.ProdutoCodigo, d.ProdutoCosif});
+                .HasForeignKey(d => new { d.ProdutoCodigo, d.ProdutoCosif });
 
         }
     }

@@ -75,3 +75,12 @@ Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\Manual
 Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\ManualMovements.Solutions\DEAL.Api\deal\bin\WebActivatorEx.dll
 Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\ManualMovements.Solutions\DEAL.Api\deal\obj\Debug\deal.Migrations.Initial.resources
 Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\ManualMovements.Solutions\DEAL.Api\deal\obj\Debug\deal.csproj.GenerateResource.cache
+Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\ManualMovements.Solutions\DEAL.Api\deal\bin\System.Web.Cors.dll
+Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\ManualMovements.Solutions\DEAL.Api\deal\bin\System.Web.Http.Cors.dll
+Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\ManualMovements.Solutions\DEAL.Api\deal\bin\System.Web.Http.Cors.xml
+Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\ManualMovements.Solutions\DEAL.Api\deal\bin\Microsoft.Owin.Cors.dll
+Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\ManualMovements.Solutions\DEAL.Api\deal\bin\Microsoft.Owin.dll
+Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\ManualMovements.Solutions\DEAL.Api\deal\bin\Owin.dll
+Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\ManualMovements.Solutions\DEAL.Api\deal\bin\Microsoft.Owin.xml
+Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\ManualMovements.Solutions\DEAL.Api\deal\bin\Microsoft.Owin.Cors.xml
+Y:\Documents\Roberto\br.com.deal\deal-test-consultion-of-manual-movements\ManualMovements.Solutions\DEAL.Api\deal\obj\Debug\deal.csprojAssemblyReference.cache

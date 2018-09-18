@@ -10,7 +10,16 @@ namespace deal.Models
 
         public ProdutoCosifModel()
         {
+            Produto = new ProdutoModel();
             MovimentosManuais = new List<MovimentoManualModel>();
+        }
+
+        public ProdutoCosifModel(ProdutoCosifModel model)
+        {
+            ProdutoCodigo = model.ProdutoCodigo;
+            ProdutoCosif = model.ProdutoCosif;
+            CodigoClassificacao = model.CodigoClassificacao;
+            Status = model.Status;
         }
 
         #endregion
@@ -31,7 +40,7 @@ namespace deal.Models
 
         public virtual ProdutoModel Produto { get; set; }
 
-        public virtual ICollection<MovimentoManualModel> MovimentosManuais { get; set; }
+        public virtual IList<MovimentoManualModel> MovimentosManuais { get; set; }
 
         #endregion
     }

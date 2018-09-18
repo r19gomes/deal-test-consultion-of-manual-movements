@@ -14,6 +14,7 @@ namespace deal.Models
 #if DEBUG
             Database.Log = d => System.Diagnostics.Debug.WriteLine(d);
 #endif
+            //Database.SetInitializer<ManualMovementsContext>(null);
         }
 
         public DbSet<ProdutoModel> Produtos { get; set; }

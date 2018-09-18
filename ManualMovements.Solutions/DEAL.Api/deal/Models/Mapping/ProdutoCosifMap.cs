@@ -7,14 +7,17 @@ namespace deal.Models.Mapping
         public ProdutoCosifMap()
         {
             // Chave Primaria
-            this.HasKey(t => t.ProdutoCodigo);
             this.HasKey(t => new { t.ProdutoCodigo, t.ProdutoCosif });
 
             // Propriedades
+            this.Property(t => t.ProdutoCodigo)
+                .HasMaxLength(04).HasColumnType("CHAR");
+            this.Property(t => t.ProdutoCosif)
+                .HasMaxLength(11).HasColumnType("CHAR");
             this.Property(t => t.CodigoClassificacao)
-                .HasMaxLength(6);
+                .HasMaxLength(6).HasColumnType("CHAR");
             this.Property(t => t.Status)
-                .HasMaxLength(1);
+                .HasMaxLength(1).HasColumnType("CHAR");
 
             // Table e Mapeamento das Colunas
             this.ToTable("PRODUTO_COSIF");
